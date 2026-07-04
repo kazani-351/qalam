@@ -6,7 +6,7 @@
 <meta property="og:title" content="Qalam">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://qalam.pages.dev/">
-<meta property="og:description" content="A pen for cultivating words — a hand-rebuilt design study with a live rich-text editor">
+<meta property="og:description" content="A pen for cultivating words. A hand-rebuilt design study with a live rich-text editor">
 <title>Qalam</title>
 <link rel="stylesheet" href="./style/site.css">
 <link rel="icon" href="./style/favicon.svg">
@@ -45,7 +45,7 @@ rich-text editor you can write in right now.</p>
 <div id="editor">
   <h2>Try the pen</h2>
   <p>This is a real editor, not a picture of one. Click anywhere and
-  start writing — make things <strong>bold</strong>, add headings and
+  start writing: make things <strong>bold</strong>, add headings and
   lists from the menu, undo your regrets.</p>
   <p>Whatever you write stays in your browser and will still be here
   when you come back. Nothing is sent anywhere.</p>
@@ -58,8 +58,8 @@ rich-text editor you can write in right now.</p>
 <ul class="grid-list">
   <li><a class="blocklink" href="https://wordgard.net/docs/guide/#h-the-schema">
     <h3>Schema-Based Editing</h3>
-    <p>The editor runs Wordgard's full schema — headings, lists,
-    quotes, figures — with the document structure enforced, not
+    <p>The editor runs Wordgard's full schema (headings, lists,
+    quotes, figures) with the document structure enforced, not
     free-form HTML.</p>
   </a></li>
   <li>
@@ -75,7 +75,7 @@ rich-text editor you can write in right now.</p>
   <li><a class="blocklink" href="https://github.com/kazani-351/qalam">
     <h3>No Build Step</h3>
     <p>Hand-written HTML and CSS, ES modules wired with an import
-    map. View source — that's the whole architecture.</p>
+    map. View source: that's the whole architecture.</p>
   </a></li>
   <li><a class="blocklink" href="https://wordgard.net/">
     <h3>Open Source Bones</h3>
@@ -86,7 +86,7 @@ rich-text editor you can write in right now.</p>
   <li><a class="blocklink" href="#about">
     <h3>A Design Study</h3>
     <p>The layout, rhythm, and typography here are studied from
-    wordgard.net — rebuilt by hand to learn why they work.</p>
+    wordgard.net, rebuilt by hand to learn why they work.</p>
   </a></li>
 </ul>
 
@@ -94,7 +94,7 @@ rich-text editor you can write in right now.</p>
 
 <h2 class="hr" id="about">About</h2>
 
-<p>Qalam (<em>qalam</em>, <span lang="ar" dir="rtl">قلم</span> — pen) is a design study of
+<p>Qalam (<em>qalam</em>, <span lang="ar" dir="rtl">قلم</span>, pen) is a design study of
 <a href="https://wordgard.net/">wordgard.net</a>, the home of Marijn
 Haverbeke's Wordgard editor library. That page is one of the
 quietly best-designed library sites on the web, so I rebuilt it by
@@ -104,14 +104,14 @@ art.</p>
 <p>Nothing was copied. The layout and typographic system were
 studied and re-implemented; the illustrations on the original are
 by <a href="https://kamilastankiewicz.com/">Kamila Stankiewicz</a>
-and appear nowhere here — every mark on this page is hand-written
+and appear nowhere here; every mark on this page is hand-written
 SVG. The editor itself is the real
 <a href="https://wordgard.net/">Wordgard</a> library (MIT), used
 with attribution and admiration.</p>
 
 <p>The source of this page is
 <a href="https://github.com/kazani-351/qalam">public</a>. A written
-companion piece — what rebuilding a good design teaches you — is on
+companion piece, on what rebuilding a good design teaches you, is on
 its way.</p>
 
 </article>
@@ -142,7 +142,7 @@ import {Wordgard, menuBar} from "wordgard/editor"
 import {fullSchema} from "wordgard/schema"
 import {history} from "wordgard/history"
 
-const STORAGE_KEY = "qalam-doc-v1"
+const STORAGE_KEY = "qalam-doc-v2"
 
 let editor = document.querySelector("#editor")
 let seed = editor.cloneNode(true)
