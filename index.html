@@ -6,10 +6,15 @@
 <meta property="og:title" content="Qalam">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://qalam.pages.dev/">
+<meta property="og:image" content="https://qalam.pages.dev/style/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:description" content="A pen for cultivating words. A hand-rebuilt design study with a live rich-text editor">
 <title>Qalam</title>
 <link rel="stylesheet" href="./style/site.css">
 <link rel="icon" href="./style/favicon.svg">
+<link rel="modulepreload" href="./modules/editor.js">
+<link rel="modulepreload" href="./modules/state.js">
+<link rel="modulepreload" href="./modules/doc.js">
 </head>
 <body>
 
@@ -145,10 +150,8 @@ import {history} from "wordgard/history"
 const STORAGE_KEY = "qalam-doc-v2"
 
 let editor = document.querySelector("#editor")
-let seed = editor.cloneNode(true)
+let doc = editor.cloneNode(true)
 editor.textContent = ""
-
-let doc = seed
 try {
   let saved = localStorage.getItem(STORAGE_KEY)
   if (saved) {

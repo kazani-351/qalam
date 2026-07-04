@@ -32,7 +32,7 @@ a:link, a:visited { color: var(--ink); }
 
 header { padding: 34px 16px 26px; }
 
-h1.front-title { margin: 0; line-height: 0; }
+h1.front-title { margin: 0; }
 h1.front-title svg { width: min(420px, 88%); height: auto; display: block; }
 
 .title-text {
