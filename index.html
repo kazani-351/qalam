@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="Qalam">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://qalam.pages.dev/">
 <meta property="og:description" content="A pen for cultivating words — a hand-rebuilt design study with a live rich-text editor">
 <title>Qalam</title>
 <link rel="stylesheet" href="./style/site.css">
@@ -58,7 +59,7 @@ rich-text editor you can write in right now.</p>
   <li><a class="blocklink" href="https://wordgard.net/docs/guide/#h-the-schema">
     <h3>Schema-Based Editing</h3>
     <p>The editor runs Wordgard's full schema — headings, lists,
-    tables, figures — with the document structure enforced, not
+    quotes, figures — with the document structure enforced, not
     free-form HTML.</p>
   </a></li>
   <li>
@@ -93,7 +94,7 @@ rich-text editor you can write in right now.</p>
 
 <h2 class="hr" id="about">About</h2>
 
-<p>Qalam (<em>qalam</em>, قلم — pen) is a design study of
+<p>Qalam (<em>qalam</em>, <span lang="ar" dir="rtl">قلم</span> — pen) is a design study of
 <a href="https://wordgard.net/">wordgard.net</a>, the home of Marijn
 Haverbeke's Wordgard editor library. That page is one of the
 quietly best-designed library sites on the web, so I rebuilt it by
@@ -131,8 +132,6 @@ its way.</p>
   "wordgard/history":"./modules/history.js",
   "wordgard/types":"./modules/types.js",
   "wordgard/schema":"./modules/schema.js",
-  "wordgard/table":"./modules/table.js",
-  "wordgard/collab":"./modules/collab.js",
   "wordgard/phrases":"./modules/phrases.js",
   "style-mod":"./modules/style-mod.js",
   "crelt":"./modules/crelt.js",
@@ -158,10 +157,15 @@ try {
   }
 } catch (_) {} // storage unavailable: run without persistence
 
+let contentEl
 function save() {
-  let content = editor.querySelector("wg-content")
-  if (!content) return
-  try { localStorage.setItem(STORAGE_KEY, content.innerHTML) } catch (_) {}
+  if (!contentEl) return
+  try {
+    localStorage.setItem(STORAGE_KEY, contentEl.innerHTML)
+    dirty = false
+  } catch (err) {
+    console.warn("Qalam: could not save to localStorage", err)
+  }
 }
 let timer, dirty = false
 
@@ -180,8 +184,12 @@ window.wg = Wordgard.create({
     })
   ]
 })
+contentEl = editor.querySelector("wg-content")
 
 addEventListener("pagehide", () => { if (dirty) save() })
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden" && dirty) save()
+})
 </script>
 
 </body>

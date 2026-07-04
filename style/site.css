@@ -2,6 +2,7 @@
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local('Merriweather Bold'), local('Merriweather-Bold'),
        url(font/merriweather-bold.woff2) format('woff2');
 }
@@ -15,7 +16,6 @@ body {
   font-size: 17px;
   font-family: sans-serif;
   --ink: #2b4c7e;
-  --ink-faint: #8fa3bf;
   --content-width: 720px;
 }
 
@@ -72,6 +72,7 @@ wg-scroller { max-height: 350px; overflow-y: auto; }
 wg-content h2:first-child { margin-top: 10px; }
 
 /* ---- ink divider ---- */
+/* stroke color %232b4c7e is baked into the data URI; keep in sync with --ink */
 
 hr.ink {
   border: none;
@@ -98,7 +99,6 @@ ul.grid-list {
 .grid-list li { padding: 10px 12px; border-radius: 10px; }
 
 a.blocklink { display: block; color: inherit; }
-a.blocklink:link, a.blocklink:visited { color: inherit; }
 a.blocklink:hover h3 { color: var(--ink); }
 li:has(> a.blocklink):hover { background: #f3f1ea; }
 
