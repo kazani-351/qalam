@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fdfcf9"/>
+  <text x="100" y="300" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="170" fill="#1c1e21">Qalam</text>
+  <path d="M104 350 C 300 375, 560 340, 780 355 S 960 372, 1010 348"
+        fill="none" stroke="#2b4c7e" stroke-width="7" stroke-linecap="round"/>
+  <g transform="translate(1006,332) rotate(24)">
+    <path d="M0 0 L30 11 L9 34 Z" fill="#2b4c7e"/>
+  </g>
+  <text x="102" y="440" font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#555">[qa-lam] <tspan font-style="italic">noun</tspan>  a pen for cultivating words</text>
+  <text x="102" y="520" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#8a8a8a">a hand-rebuilt design study with a live rich-text editor</text>
+</svg>

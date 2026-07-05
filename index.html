@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Qalam">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://qalam.pages.dev/">
+<meta property="og:image" content="https://qalam.pages.dev/style/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:description" content="A pen for cultivating words. A hand-rebuilt design study with a live rich-text editor">
+<title>Qalam</title>
+<link rel="stylesheet" href="./style/site.css">
+<link rel="icon" href="./style/favicon.svg">
+<link rel="modulepreload" href="./modules/editor.js">
+<link rel="modulepreload" href="./modules/state.js">
+<link rel="modulepreload" href="./modules/doc.js">
+</head>
+<body>
+
+<header>
+  <h1 class="front-title">
+    <svg viewBox="0 0 560 120" role="img" aria-label="Qalam" xmlns="http://www.w3.org/2000/svg">
+      <text x="10" y="78" class="title-text">Qalam</text>
+      <!-- ink flourish under the wordmark -->
+      <path class="ink-stroke" d="M14 98 C 120 112, 300 88, 420 96 S 520 106, 540 92"
+            fill="none" stroke-width="3" stroke-linecap="round"/>
+      <!-- reed-pen nib at the stroke's end -->
+      <g class="nib" transform="translate(538,84) rotate(24)">
+        <path d="M0 0 L14 5 L4 16 Z"/>
+        <line x1="7" y1="7" x2="12" y2="1" stroke-width="1.2"/>
+      </g>
+    </svg>
+  </h1>
+  <nav><div class="navlinks">
+    <a href="#editor">Try</a>
+    <a href="#about">About</a>
+    <a href="https://kazani.pages.dev">kazani</a>
+    <a href="https://github.com/kazani-351/qalam">Code</a>
+  </div></nav>
+</header>
+
+<article>
+
+<p><strong>Qalam</strong> <span class="dict-entry">[qa-lam]
+<span class="pos">noun</span></span> A pen for cultivating words.
+A hand-rebuilt study of a well-made web page, carrying a live
+rich-text editor you can write in right now.</p>
+
+<div id="editor">
+  <h2>Try the pen</h2>
+  <p>This is a real editor, not a picture of one. Click anywhere and
+  start writing: make things <strong>bold</strong>, add headings and
+  lists from the menu, undo your regrets.</p>
+  <p>Whatever you write stays in your browser and will still be here
+  when you come back. Nothing is sent anywhere.</p>
+</div>
+
+<hr class="ink">
+
+<h2 class="hr" id="features">What this is</h2>
+
+<ul class="grid-list">
+  <li><a class="blocklink" href="https://wordgard.net/docs/guide/#h-the-schema">
+    <h3>Schema-Based Editing</h3>
+    <p>The editor runs Wordgard's full schema (headings, lists,
+    quotes, figures) with the document structure enforced, not
+    free-form HTML.</p>
+  </a></li>
+  <li>
+    <h3>Full History</h3>
+    <p>Undo and redo work the way they should, through the menu or
+    the keyboard shortcuts you already know.</p>
+  </li>
+  <li>
+    <h3>Persistent</h3>
+    <p>Your text is saved to your browser's local storage as you
+    type. No account, no server, no network requests.</p>
+  </li>
+  <li><a class="blocklink" href="https://github.com/kazani-351/qalam">
+    <h3>No Build Step</h3>
+    <p>Hand-written HTML and CSS, ES modules wired with an import
+    map. View source: that's the whole architecture.</p>
+  </a></li>
+  <li><a class="blocklink" href="https://wordgard.net/">
+    <h3>Open Source Bones</h3>
+    <p>The editor is <a href="https://wordgard.net/">Wordgard</a>,
+    an MIT-licensed rich-text editor library. This page ships its
+    modules unmodified, license included.</p>
+  </a></li>
+  <li><a class="blocklink" href="#about">
+    <h3>A Design Study</h3>
+    <p>The layout, rhythm, and typography here are studied from
+    wordgard.net, rebuilt by hand to learn why they work.</p>
+  </a></li>
+</ul>
+
+<hr class="ink">
+
+<h2 class="hr" id="about">About</h2>
+
+<p>Qalam (<em>qalam</em>, <span lang="ar" dir="rtl">قلم</span>, pen) is a design study of
+<a href="https://wordgard.net/">wordgard.net</a>, the home of Marijn
+Haverbeke's Wordgard editor library. That page is one of the
+quietly best-designed library sites on the web, so I rebuilt it by
+hand to understand it: same bones, same rhythm, my own words and
+art.</p>
+
+<p>Nothing was copied. The layout and typographic system were
+studied and re-implemented; the illustrations on the original are
+by <a href="https://kamilastankiewicz.com/">Kamila Stankiewicz</a>
+and appear nowhere here; every mark on this page is hand-written
+SVG. The editor itself is the real
+<a href="https://wordgard.net/">Wordgard</a> library (MIT), used
+with attribution and admiration.</p>
+
+<p>The source of this page is
+<a href="https://github.com/kazani-351/qalam">public</a>. A written
+companion piece, on what rebuilding a good design teaches you, is on
+its way.</p>
+
+</article>
+
+<footer>
+  <div class="footer-content">
+    a design study of <a href="https://wordgard.net/">wordgard.net</a><br>
+    hand-built by <a href="https://kazani.pages.dev">kazani</a> ·
+    <a href="https://github.com/kazani-351/qalam">page sources</a>
+  </div>
+</footer>
+
+<script type="importmap">{"imports":{
+  "wordgard/doc":"./modules/doc.js",
+  "wordgard/state":"./modules/state.js",
+  "wordgard/editor":"./modules/editor.js",
+  "wordgard/command":"./modules/command.js",
+  "wordgard/history":"./modules/history.js",
+  "wordgard/types":"./modules/types.js",
+  "wordgard/schema":"./modules/schema.js",
+  "wordgard/phrases":"./modules/phrases.js",
+  "style-mod":"./modules/style-mod.js",
+  "crelt":"./modules/crelt.js",
+  "@marijn/find-cluster-break":"./modules/find-cluster-break.js"
+}}</script>
+<script type="module">
+import {Wordgard, menuBar} from "wordgard/editor"
+import {fullSchema} from "wordgard/schema"
+import {history} from "wordgard/history"
+
+const STORAGE_KEY = "qalam-doc-v2"
+
+let editor = document.querySelector("#editor")
+let doc = editor.cloneNode(true)
+editor.textContent = ""
+try {
+  let saved = localStorage.getItem(STORAGE_KEY)
+  if (saved) {
+    doc = document.createElement("div")
+    doc.innerHTML = saved
+  }
+} catch (_) {} // storage unavailable: run without persistence
+
+let contentEl
+function save() {
+  if (!contentEl) return
+  try {
+    localStorage.setItem(STORAGE_KEY, contentEl.innerHTML)
+    dirty = false
+  } catch (err) {
+    console.warn("Qalam: could not save to localStorage", err)
+  }
+}
+let timer, dirty = false
+
+window.wg = Wordgard.create({
+  parent: editor,
+  doc,
+  config: [
+    fullSchema(),
+    history(),
+    menuBar(),
+    Wordgard.updateListener.of(update => {
+      if (!update.docChanged) return
+      dirty = true
+      clearTimeout(timer)
+      timer = setTimeout(save, 400)
+    })
+  ]
+})
+contentEl = editor.querySelector("wg-content")
+
+addEventListener("pagehide", () => { if (dirty) save() })
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden" && dirty) save()
+})
+</script>
+
+</body>
+</html>
