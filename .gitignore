@@ -6,3 +6,9 @@
 node_modules/
 .DS_Store
 NOTES.md
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
