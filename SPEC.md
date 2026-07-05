@@ -4,7 +4,7 @@ One-page static site: a hand-rebuilt **design study of wordgard.net**, branded a
 
 ## 1. Goal & success criteria
 
-- A live page at `qalam.pages.dev` that captures the wordgard.net look and feel (crafted, editorial, hand-made) with 100% original assets and copy.
+- A live page at `qalam.kazani.workers.dev` that captures the wordgard.net look and feel (crafted, editorial, hand-made) with 100% original assets and copy.
 - "Good" = a visitor can type in the editor, reload, and find their text still there; the page reads as a real project page, not a template.
 - Done when all acceptance criteria (§9) pass on desktop and mobile viewports.
 
